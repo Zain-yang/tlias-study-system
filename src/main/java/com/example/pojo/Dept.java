@@ -3,8 +3,8 @@ package com.example.pojo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.sql.Timestamp;
 
-import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
@@ -12,6 +12,6 @@ import java.time.LocalDateTime;
 public class Dept {
     private Integer id;
     private String name;
-    private LocalDateTime createTime;
-    private LocalDateTime updateTime;
+    private Timestamp createTime;
+    private Timestamp updateTime;
 }
