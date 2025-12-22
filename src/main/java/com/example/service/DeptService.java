@@ -9,5 +9,9 @@ public interface DeptService {
 
     void delete(Integer id);
 
-    void insert(String dept);
+    void insert(Dept dept);
+
+    void update(Dept dept);
+
+    Dept getById(Integer id);
 }

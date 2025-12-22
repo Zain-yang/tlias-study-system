@@ -6,6 +6,8 @@ import com.example.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -24,7 +26,22 @@ public class DeptServiceImpl implements DeptService {
     }
 
     @Override
-    public void insert(String name) {
-        deptMapper.insert(name);
+    public void insert(Dept dept) {
+        dept.setCreateTime(Timestamp.valueOf(LocalDateTime.now()));
+        dept.setUpdateTime(Timestamp.valueOf(LocalDateTime.now()));
+        deptMapper.insert(dept);
+    }
+
+    @Override
+    public void update(Dept dept) {
+
+        dept.setUpdateTime(Timestamp.valueOf(LocalDateTime.now()));
+
+        deptMapper.update(dept);
+    }
+
+    @Override
+    public Dept getById(Integer id) {
+        return deptMapper.findById(id);
     }
 }

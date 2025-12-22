@@ -11,5 +11,9 @@ public interface DeptMapper {
 
     void delete(Integer id);
 
-    void insert(String name);
+    void insert(Dept dept);
+
+    void update(Dept dept);
+
+    Dept findById(Integer id);
 }
