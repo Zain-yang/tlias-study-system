@@ -1,0 +1,15 @@
+#???????
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/study_smart
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: Springboot-Web-Y
+
+#mybatis??
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
